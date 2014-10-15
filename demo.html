@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <title>s_slide</title>
+    <link rel="stylesheet" type="text/css" href="./css/sslide.css" />
+	<style type="text/css">
+		* {margin: 0; padding: 0; font-size: 14px; font-family: Arial,"微软雅黑";}
+		a {text-decoration: none;}
+		img {border: 0;}		
+		.main-container {min-width: 1020px; min-height: 1030px;}
+		.container {width: 960px; margin: 0 auto;}
+		.header {height: 95px; background-color: #3f3f3f;}
+		.header h1 {line-height: 65px; font-size: 24px; color: #fff; font-weight: normal;}
+		.middle {height: 800px; background-color: #eee;}
+		.bottom {height: 135px; background-color: #aaa;}
+	</style>
+</head>
+<body>
+	<div class="header">
+		<div class="container">
+			<h1>sslide demo</h1>
+		</div>
+	</div>
+
+	<div class="middle">
+		<div class="container" style="padding-top: 70px; position: relative;">
+		
+			<!--轮播代码块开始-->
+			<div id="myslide_1" class="pic_container">
+				<ul class="pic_box size_box"></ul>
+				<span class="btnl btns"></span>
+				<span class="btnr btns"></span>
+				<div class="dots"></div>
+			</div>
+			<!--轮播代码块结束-->
+			
+			<!--轮播代码块开始-->
+			<div id="myslide_2" class="pic_container">
+				<ul class="pic_box size_box"></ul>
+				<span class="btnl btns"></span>
+				<span class="btnr btns"></span>
+				<div class="dots"></div>
+			</div>
+			<!--轮播代码块结束-->
+			
+		</div>
+	</div>
+
+	<div class="bottom"></div>
+
+    <script type="text/javascript" src="./jslibs/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="./js/sslide.js"></script>	
+	<script type="text/javascript">
+		$(document).ready(function(){
+			
+			var info1 = {
+				"lbId": "myslide_1",
+				"picWidth": 400,
+				"picHeight": 300,
+				//"interTime": 2500,
+				//"switchBtnShow": false,
+				//"switchDotShow": false
+				//"autoSlide": false,
+				//"pause": false,
+				//"loop": false,
+				"picNum": 5,
+				//"picPath": ["./css/images/slb1.png","./css/images/slb2.png","./css/images/slb3.png","./css/images/slb4.png"]
+			};
+			
+			/*
+			var info2 = {
+				"lbId": "myslide_2",
+				"picWidth": 320,
+				"picHeight": 240,
+				"picNum": 3
+			};
+			*/
+			
+			SSlide(info1);
+			//SSlide(info2);
+		});
+	</script>
+</body>
+</html>

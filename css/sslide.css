@@ -1,0 +1,97 @@
+/*默认读取images目录中名为 slb1.png - slb8.png 的图片*/
+.pic_container ul li.p1 {
+}
+.pic_container ul li.p2 {
+    background: url("images/slb1.png") 0 0 no-repeat;
+}
+.pic_container ul li.p3 {
+    background: url("images/slb2.png") 0 0 no-repeat;
+}
+.pic_container ul li.p4 {
+    background: url("images/slb3.png") 0 0 no-repeat;
+}
+.pic_container ul li.p5 {
+    background: url("images/slb4.png") 0 0 no-repeat;
+}
+.pic_container ul li.p6 {
+    background: url("images/slb5.png") 0 0 no-repeat;
+}
+.pic_container ul li.p7 {
+	background: url("images/slb6.png") 0 0 no-repeat;
+}
+.pic_container ul li.p8 {
+	background: url("images/slb7.png") 0 0 no-repeat;
+}
+.pic_container ul li.p9 {
+	background: url("images/slb8.png") 0 0 no-repeat;
+}
+.pic_container ul li.p10 {
+}
+
+.pic_container {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+}
+.pic_container .pic_box {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 0;
+    overflow: hidden;
+}
+.pic_container .pic_box .size_pic {
+	background-repeat: no-repeat;
+	background-position: 0 0;
+}
+.pic_container .pic_box li {
+    display: inline-block;
+}
+.pic_container .btnl {
+    display: block;
+    width: 60px;
+    height: 60px;
+    background-color: #333;
+	background-image: url(images/btn_l_bg.png);
+	background-repeat: no-repeat;
+	background-position: center;
+    opacity: 0;
+    position: absolute;
+    cursor: pointer;
+}
+.pic_container .btnr {
+    display: block;
+    width: 60px;
+    height: 60px;
+    background-color: #333;
+	background-image: url(images/btn_r_bg.png);
+	background-repeat: no-repeat;
+	background-position: center;
+    opacity: 0;
+    position: absolute;
+    cursor: pointer;
+}
+.pic_container .dots span {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border-radius: 7px;
+    background: #bebebd;
+    margin: 0 10px 0 10px;
+    cursor: pointer;
+}
+.pic_container .dots {
+    position: absolute;
+    font-size: 0;
+}
+.pic_container .dots .dot_now {
+    background: #ff4200;
+}
+.pic_container .deep {
+    background-color: #333;
+    opacity: 0.6;
+    -webkit-transition: opacity 0.3s ease-in-out;
+	-moz-transition: opacity 0.3s ease-in-out;
+	transition: opacity 0.3s ease-in-out;
+}
