@@ -1,41 +1,44 @@
 (function(){
 
-	//default config
+	//默认config
 	var defaultConfig = {
-		//图片宽度
+		//图片宽度，单位px
 		"picWidth": 600,
 		
-		//图片高度
+		//图片高度，单位px
 		"picHeight": 400,
 		
-		//Dom id
+		//轮播代码块的id, 必需参数
 		"lbId": "",
 		
-		//picnum
+		//轮播图片数目，可选范围1-8
 		"picNum": 5,
 		
-		//picPath
+		//轮播图片路径，图片路径的字符串数组，如：["images/slb1.png","images/slb2.png","images/slb3.png"]
+		//不传递该参数时，使用../css/iamges目录中slb1.png - slb8.png 的图片，传入图片数组后，picNum的值等于数组的长度。
 		"picPath": [],
 		
-		//左右切换图片按钮显示
+		//左右切换图片按钮, 默认显示
 		"switchBtnShow": true,
 		
-		//切换图片圆点显示
+		//切换图片圆点, 默认显示
 		"switchDotShow": true,
 		
-		//鼠标移入是否暂停滑动
+		//鼠标移入是否暂停, 默认暂停
 		"pause": true,
 		
-		//自动滚动
+		//自动滚动, 默认开启
 		"autoSlide": true,
 		
-		//滑动间隔时间
+		//滑动间隔时间, 单位毫秒
 		"interTime": 3500,
 		
-		//是否循环滑动
+		//是否循环滑动, 
+		//设为true时，沿一个方向滑动到一端的末尾时，会继续沿该方向滑入另一端末尾的图片。
+		//设为false时，沿一个方向滑动到一端的末尾时，会沿相反方向滑到另一端末尾的图片。
 		"loop": true		
 	}
-	//custom config
+	//自定义config，设置自定义config时一定要传入正确的参数值
 	var customConfig = {};
 	
 	//设置config

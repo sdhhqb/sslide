@@ -24,8 +24,12 @@
 	</div>
 
 	<div class="middle">
-		<div class="container" style="padding-top: 70px; position: relative;">
+		<div class="container" style="padding-top: 70px;">
 		
+			<!--
+				在html页面要添加轮播的容器中插入一个完整的轮播代码块, 并设置一个id。
+			-->
+			
 			<!--轮播代码块开始-->
 			<div id="myslide_1" class="pic_container">
 				<ul class="pic_box size_box"></ul>
@@ -52,7 +56,11 @@
     <script type="text/javascript" src="./jslibs/jquery-1.11.1.min.js"></script>
     <script type="text/javascript" src="./js/sslide.js"></script>	
 	<script type="text/javascript">
-		$(document).ready(function(){
+		$(document).ready(function(){			
+			
+			//设置config, 必需的参数为lbId, 其他参数可选, ./js/sslide.js文件最前面有config参数详细说明.
+			//如果没有传入图片路径数组，会默认读取./css/images目录下的slb1.png 到 slb5.png 的5张图片, 
+			//最简单的添加轮播的方式是直接覆盖这几张图片。
 			
 			var info1 = {
 				"lbId": "myslide_1",
@@ -64,21 +72,20 @@
 				//"autoSlide": false,
 				//"pause": false,
 				//"loop": false,
-				"picNum": 5,
-				//"picPath": ["./css/images/slb1.png","./css/images/slb2.png","./css/images/slb3.png","./css/images/slb4.png"]
-			};
+				//"picNum": 5,
+				"picPath": ["./css/images/slb1.png","./css/images/slb2.png","./css/images/slb3.png","./css/images/slb4.png"]
+			};			
 			
-			/*
 			var info2 = {
 				"lbId": "myslide_2",
 				"picWidth": 320,
 				"picHeight": 240,
-				"picNum": 3
-			};
-			*/
+				"picNum": 3,
+				"interTime": 1500
+			};			
 			
 			SSlide(info1);
-			//SSlide(info2);
+			SSlide(info2);
 		});
 	</script>
 </body>
