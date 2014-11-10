@@ -31,8 +31,10 @@
 			-->
 			
 			<!--轮播代码块开始-->
+			<!-- 轮播1，不使用自定义dom -->
 			<div id="myslide_1" class="pic_container">
-				<ul class="pic_box size_box"></ul>
+				<ul class="pic_box size_box">
+				</ul>
 				<span class="btnl btns"></span>
 				<span class="btnr btns"></span>
 				<div class="dots"></div>
@@ -40,8 +42,27 @@
 			<!--轮播代码块结束-->
 			
 			<!--轮播代码块开始-->
+			<!-- 轮播2，使用自定义dom，p1和p4中的内容应该相同，p2和p5中的内容应该相同 -->
 			<div id="myslide_2" class="pic_container">
-				<ul class="pic_box size_box"></ul>
+				<ul class="pic_box size_box">				
+					<li class="p1 size_pic">
+						<!-- 自定义dom内容 -->
+					</li>
+					<li class="p2 size_pic">
+						<!-- 自定义dom内容 -->
+						<a href="javascript: void(0)" style="display: inline-block; background: rgba(255,255,255,0.3); width: 100%; height: 100%;"></a>
+					</li>
+					<li class="p3 size_pic">
+						<!-- 自定义dom内容 -->
+					</li>
+					<li class="p4 size_pic">
+						<!-- 自定义dom内容 -->
+					</li>
+					<li class="p5 size_pic">
+						<!-- 自定义dom内容 -->
+						<a href="javascript: void(0)" style="display: inline-block; background: rgba(255,255,255,0.3); width: 100%; height: 100%;"></a>
+					</li>
+				</ul>
 				<span class="btnl btns"></span>
 				<span class="btnr btns"></span>
 				<div class="dots"></div>
@@ -62,6 +83,7 @@
 			//如果没有传入图片路径数组，会默认读取./css/images目录下的slb1.png 到 slb5.png 的5张图片, 
 			//最简单的添加轮播的方式是直接覆盖这几张图片。
 			
+			//轮播1的配置，4张图片轮播，参数中传入图片地址
 			var info1 = {
 				"lbId": "myslide_1",
 				"picWidth": 400,
@@ -76,14 +98,17 @@
 				"picPath": ["./css/images/slb1.png","./css/images/slb2.png","./css/images/slb3.png","./css/images/slb4.png"]
 			};			
 			
+			//轮播2的配置，使用自定义dom，3张图片轮播，读取images目录下的图片
 			var info2 = {
 				"lbId": "myslide_2",
 				"picWidth": 320,
 				"picHeight": 240,
 				"picNum": 3,
-				"interTime": 1500
+				"interTime": 2500,
+				"customDom": true
 			};			
 			
+			//启动轮播
 			SSlide(info1);
 			SSlide(info2);
 		});
